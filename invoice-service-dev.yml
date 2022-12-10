@@ -14,7 +14,7 @@ spring:
         name: invoice-service
     datasource:
         password: 12345
-        url: jdbc:postgresql://localhost:5432/invoicedbdev
+        url: jdbc:postgresql://localhost:5442/invoicedbdev
         username: postgres
     jpa:
         hibernate:
