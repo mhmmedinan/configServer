@@ -11,7 +11,7 @@ server:
     port: 0
 spring:
     application:
-        name: invertory-service
+        name: invertoryservice.api
     datasource:
         password: 12345
         url: jdbc:postgresql://localhost:5434/invertorydbprod
@@ -30,7 +30,7 @@ spring:
     kafka:
         consumer:
             auto-offset-reset: earliest
-            bootstrap-servers: localhost:9092
+            bootstrap-servers: kafka:9092
             group-id: inventory
             key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
             properties:
@@ -40,7 +40,7 @@ spring:
                             packages: '*'
             value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
         producer:
-            bootstrap-servers: localhost:9092
+            bootstrap-servers: kafka:9092
             key-serializer: org.apache.kafka.common.serialization.StringSerializer
             value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
         topic:
