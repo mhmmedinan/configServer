@@ -43,6 +43,8 @@ spring:
             bootstrap-servers: kafka:9092
             key-serializer: org.apache.kafka.common.serialization.StringSerializer
             value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        topic:
+            name: invertory_topic
 
 management:
   endpoint:
