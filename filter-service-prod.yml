@@ -29,7 +29,7 @@ spring:
                             packages: '*'
             value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
         topic:
-            name: rental_topic2
+            name: invertory_topic
 
 management:
   endpoint:
