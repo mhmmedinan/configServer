@@ -12,6 +12,11 @@ server:
 spring:
     application:
         name: filter-service
+    security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:8080/auth/realms/rentacarmicroservices/protocol/openid-connect/certs
     data:
         mongodb:
             database: filterservice
