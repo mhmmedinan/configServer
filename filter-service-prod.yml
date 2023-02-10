@@ -24,9 +24,9 @@ spring:
   zipkin:
     base-url: http://zipkin:9411s
   kafka:
+    bootstrap-servers: localhost:9092
     consumer:
       auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:
