@@ -25,6 +25,14 @@ spring:
         - filters:
             - RemoveRequestHeader=Cookie
             - StripPrefix=1
+          id: filter-service
+          predicates:
+            - Path=/filter-service/api/**
+            - Method=GET,POST,PUT,DELETE
+          uri: lb://filter-service
+        - filters:
+            - RemoveRequestHeader=Cookie
+            - StripPrefix=1
           id: invoice-service
           predicates:
             - Path=/invoice-service/api/**
