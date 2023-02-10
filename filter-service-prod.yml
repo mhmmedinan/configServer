@@ -21,7 +21,8 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://keycloak:8080/auth/realms/rentacarmicroservices/protocol/openid-connect/certs
-
+  zipkin:
+    base-url: http://zipkin:9411s
   kafka:
     consumer:
       auto-offset-reset: earliest
