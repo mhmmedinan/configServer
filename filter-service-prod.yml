@@ -10,6 +10,10 @@ eureka:
 server:
   port: 0
 spring:
+  data:
+    mongodb:
+      database: filterservice
+      uri: mongodb://localhost:27017
   application:
     name: filter-service
   security:
@@ -17,14 +21,11 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://keycloak:8080/auth/realms/rentacarmicroservices/protocol/openid-connect/certs
-  data:
-    mongodb:
-      database: filterservice
-      uri: mongodb://localhost:27017
+
   kafka:
-      bootstrap-servers: localhost:9092
     consumer:
       auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:
