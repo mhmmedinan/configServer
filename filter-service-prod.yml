@@ -22,7 +22,7 @@ spring:
         jwt:
           jwk-set-uri: http://keycloak:8080/auth/realms/rentacarmicroservices/protocol/openid-connect/certs
   zipkin:
-    base-url: http://zipkin:9411s
+    base-url: http://zipkin:9411
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
