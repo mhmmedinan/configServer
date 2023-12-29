@@ -14,7 +14,7 @@ spring:
         name: inventory-service
     datasource:
         password: 12345
-        url: jdbc:postgresql://localhost:5440/postgres
+        url: jdbc:postgresql://localhost:5440/inventorydbdev
         username: admin
     jpa:
         hibernate:
